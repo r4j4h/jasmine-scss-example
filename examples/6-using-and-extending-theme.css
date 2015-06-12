@@ -1,0 +1,5 @@
+/* Demonstration page CSS using aspects from Theme B */
+/* Assumes themeB.css is included before it */
+.btn {
+  font-size: 2em;
+  border-bottom-color: blue; }

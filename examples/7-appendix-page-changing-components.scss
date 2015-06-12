@@ -1,0 +1,25 @@
+/* Demonstration page CSS */
+/* Works with or without themes */
+
+// Demonstrating that you can use any libraries or whatever you like
+@import "../some-sass-library/mixins";
+// Import callout component IPE definition mixins
+@import "../components/callout/extends";
+// Include the minimal callout components' IPE definitions
+@include define-callout-solo();
+
+// We are defining a place holder extend
+.page-specific-object {
+    @extend %page-specific-object;
+}
+
+/* Style the callout component by its IPE definition */
+%cmp-callout {
+    // We are assocating our page specific object as callouts so they share styles
+    @extend %page-specific-object;
+}
+
+// We're crazy to do this, but callouts will get this change
+%page-specific-object {
+    width: 100px;
+}

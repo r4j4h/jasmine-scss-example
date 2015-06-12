@@ -1,0 +1,5 @@
+/* Demonstration page CSS */
+/* Works with or without themes */
+/* Style the callout component by its IPE definition */
+.page-specific-object, .callout {
+  width: 100px; }

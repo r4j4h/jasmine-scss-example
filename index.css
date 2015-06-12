@@ -1,0 +1,22 @@
+/* Demonstration page CSS */
+/* Works with or without themes */
+/* Style the callout component by its IPE definition */
+.callout {
+  /* Give it a background color */
+  background-color: white;
+  /* Nest selectors in it */
+  /* Nest other IPE definitions */ }
+  .callout .page-specific-thing {
+    z-index: 5;
+    display: inline-block;
+    text-align: center; }
+  .callout .button,
+  .callout button,
+  .callout input[type="button"] {
+    color: white; }
+
+/* Style the button component by its IPE definition */
+.button,
+button,
+input[type="button"] {
+  color: red; }

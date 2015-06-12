@@ -1,0 +1,14 @@
+/* Demonstration page CSS using aspects from Theme A */
+/* Assumes themeA.css is available under same relative path to CSS file and will let browser load */
+
+// This couples the output to the theme, so one file per theme might be useful.
+
+// If we want to use specific theme variables to maintain colors, we can!
+
+@import "../themes/themeA/themeA.css";
+@import "../themes/themeA/variables";
+
+.hero {
+    width: 100%;
+    border-bottom-color: $color;
+}

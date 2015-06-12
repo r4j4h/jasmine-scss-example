@@ -1,0 +1,31 @@
+/* Demonstration page CSS that builds on a theme */
+/* Includes Theme A via @import */
+
+@import "../themes/themeA/themeA.css";
+
+// Import callout component IPE definition mixins
+@import "../components/callout/extends";
+
+// Include the minimal callout components' IPE definitions
+@include define-callout-solo();
+
+
+/* Style the callout component by its IPE definition */
+%cmp-callout {
+
+    .page-specific-thing {
+        border-width: 100px;
+    }
+
+}
+
+// Import button component IPE definition mixins
+@import "../components/button/extends"; // This is needed since we're extending the theme via .css and not its SASS
+
+// Include the button components' IPE definitions
+@include define-button();
+
+/* (Re-)Style the button component by its IPE definition */
+%cmp-button {
+    color: brown; // This will come in AFTER theme A's and will not affect theme A's styling of %cmp-button
+}

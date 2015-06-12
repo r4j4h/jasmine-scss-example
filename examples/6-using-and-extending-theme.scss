@@ -1,0 +1,21 @@
+/* Demonstration page CSS using aspects from Theme B */
+/* Assumes themeB.css is included before it */
+
+// We want to use specific theme variables to maintain colors
+@import "../themes/themeB/variables";
+
+// We'll need to extend any components we want to affect, let's do twitter buttons
+
+// Import button component IPE definition mixins
+@import "../components/button/extends";
+
+// Include the bootstrap button IPE definitions since themeB uses bootstrap style
+@include define-button-bootstrap(); // We better match since we're tying to a specific theme!
+
+
+// Crazy override for sales page or something
+%cmp-button {
+    font-size: 2em;
+    border-bottom-color: $color;
+}
+

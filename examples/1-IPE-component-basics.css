@@ -1,0 +1,9 @@
+/* Demonstration page CSS */
+/* Works with or without themes */
+/* Style the callout component by its IPE definition */
+.callout {
+  padding: 10px; }
+  .callout .page-specific-thing {
+    border-width: 100px; }
+  .callout > .callout {
+    padding: 5px; }

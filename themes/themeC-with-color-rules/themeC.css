@@ -1,0 +1,36 @@
+/* Theme C
+ Based on Theme A but providing theme-color--primary rule for demonstration. */
+// Import component IPE definition mixins
+// Demonstrating that you can use any libraries or whatever you like
+.theme-color--primary {
+  color: green; }
+
+/* You control where your output goes: (and order does not matter!) */
+/* Note that comments or styles inside a component's definition will appear
+ wherever people actually do their defining! */
+/** Buttons **/
+.button,
+button,
+input[type="button"] {
+  color: green; }
+
+/** Callouts **/
+/* Style the callout component by its IPE definition */
+.callout {
+  border: 1px solid black;
+  padding: 1em; }
+
+/* Style the callout (alert modifier) component by its IPE definition */
+.callout-alert {
+  border-color: red;
+  background: red; }
+
+/** Complexity: Style button in callout **/
+/* Style the callout component by its IPE definition */
+.callout .button,
+.callout button,
+.callout input[type="button"] {
+  color: red;
+  background-color: green;
+  display: inline-block;
+  text-align: center; }

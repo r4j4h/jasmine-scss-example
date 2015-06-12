@@ -1,0 +1,5 @@
+/* Demonstration page CSS using aspects from Theme B */
+/* Assumes themeB.css is included before it */
+.hero {
+  width: 100%;
+  border-bottom-color: blue; }

@@ -1,0 +1,31 @@
+
+// Define minimal use of placeholder extend
+
+@mixin define-callout-solo() {
+    .callout {
+        @extend %cmp-callout;
+    }
+}
+
+@mixin define-callout() {
+    /* Note that comments or styles inside a component's definition will appear
+     wherever people actually do their defining! */
+    // So stick with these.
+    .callout {
+
+        @extend %cmp-callout;
+
+        &-alert {
+            @extend %cmp-callout_alert;  // For example, lets require that all callout components style an alert version
+        }
+
+        &-warning {
+            @extend %cmp-callout_warning !optional;
+        }
+
+        &-positive {
+            @extend %cmp-callout_positive !optional;
+        }
+    }
+
+}

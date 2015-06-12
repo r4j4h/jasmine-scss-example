@@ -1,0 +1,40 @@
+/* Theme B
+ Demonstrating using a different IPE definition that outputs Bootstrap compatible classes
+ using the same component interface. */
+// Import component IPE definition mixins
+// Demonstrating that you can use any libraries or whatever you like
+/* You control where your output goes: (and order does not matter!) */
+/* Include the callout components' IPE definitions */
+/* Note that comments or styles inside a component's definition will appear
+ wherever people actually do their defining! */
+// Include the minimal callout components' IPE definitions
+/** Buttons **/
+.btn {
+  color: blue; }
+
+/** Callouts **/
+/* Style the callout component by its IPE definition */
+.callout {
+  border: 1px solid black;
+  padding: 1em; }
+
+/* Style the callout (alert modifier) component by its IPE definition */
+.callout-alert {
+  border-color: red;
+  background: red; }
+
+/* Style the callout (warning modifier) component by its (optional!) IPE definition */
+.callout-warning {
+  border-color: yellow;
+  background: yellow; }
+
+/* Style the callout (positive modifier) component by its (optional!) IPE definition */
+.callout-positive {
+  border-color: green;
+  background: green; }
+
+/** Complexity: Style button in callout **/
+/* Style the callout component by its IPE definition */
+.callout .btn {
+  color: blue;
+  background-color: blue; }

@@ -1,0 +1,43 @@
+/* Demonstration page CSS */
+/* Works with or without themes */
+
+// Demonstrating that you can use any libraries or whatever you like
+@import "some-sass-library/mixins";
+
+// Import button component IPE definition mixins
+@import "components/button/extends";
+
+// Import callout component IPE definition mixins
+@import "components/callout/extends";
+
+// Include the minimal callout components' IPE definitions
+@include define-callout-solo();
+
+// Include the button components' IPE definitions
+@include define-button();
+
+/* Style the callout component by its IPE definition */
+%cmp-callout {
+
+    /* Give it a background color */
+    background-color: white;
+
+    /* Nest selectors in it */
+    .page-specific-thing {
+
+        z-index: 5;
+
+        @include apply-basic-clearfix();
+    }
+
+    /* Nest other IPE definitions */
+    %cmp-button {
+        color: white;
+    }
+
+}
+
+/* Style the button component by its IPE definition */
+%cmp-button {
+    color: red;
+}

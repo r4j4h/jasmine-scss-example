@@ -1,0 +1,54 @@
+/* Theme A */
+
+// Import component IPE definition mixins
+@import "../../components/extends";
+
+// Demonstrating that you can use any libraries or whatever you like
+@import "../../some-sass-library/mixins";
+
+@import "variables";
+
+
+// Style button
+/** Buttons **/
+
+%cmp-button {
+	color: $color;
+}
+
+
+// Style callout
+/** Callouts **/
+
+/* Style the callout component by its IPE definition */
+%cmp-callout {
+	border: 1px solid black;
+	padding: 1em;
+}
+
+/* Style the callout (alert modifier) component by its IPE definition */
+%cmp-callout_alert {
+    border-color: red;
+    background: red;
+}
+
+// Note in this theme we don't care about warning or positive colors b/c of some reason
+
+
+// Style button in callout
+/** Complexity: Style button in callout **/
+
+/* Style the callout component by its IPE definition */
+%cmp-callout {
+
+	%cmp-button {
+
+		color: red;
+		background-color: $color;
+        @include apply-basic-clearfix();
+
+	}
+}
+
+/* You control where your output goes: (and order does not matter!) */
+@import "rules"; // Try commenting me out ;)

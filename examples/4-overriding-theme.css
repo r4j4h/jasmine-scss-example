@@ -1,0 +1,42 @@
+/* Demonstration page CSS that extends a theme */
+/* Includes Theme A built in */
+/* Theme A */
+/** Buttons **/
+.button,
+button,
+input[type="button"] {
+  color: red; }
+
+/** Callouts **/
+/* Style the callout component by its IPE definition */
+.callout {
+  border: 1px solid black;
+  padding: 1em; }
+
+/* Style the callout (alert modifier) component by its IPE definition */
+.callout-alert {
+  border-color: red;
+  background: red; }
+
+/** Complexity: Style button in callout **/
+/* Style the callout component by its IPE definition */
+.callout .button,
+.callout button,
+.callout input[type="button"] {
+  color: red;
+  background-color: red;
+  display: inline-block;
+  text-align: center; }
+
+/* You control where your output goes: (and order does not matter!) */
+/* Note that comments or styles inside a component's definition will appear
+ wherever people actually do their defining! */
+/* Style the callout component by its IPE definition */
+.callout .page-specific-thing {
+  border-width: 100px; }
+
+/* Re-style button for page */
+.button,
+button,
+input[type="button"] {
+  color: brown; }

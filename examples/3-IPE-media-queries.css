@@ -1,0 +1,29 @@
+/* Media Query Demonstration */
+/* Style the callout component by its IPE definition */
+.callout .page-specific-thing {
+  display: inline-block;
+  text-align: center; }
+
+/* Style how it should look on screens */
+@media screen {
+  .callout {
+    font-size: 1.5em; }
+
+  .page-specific-thing {
+    display: inline-block;
+    text-align: center; } }
+/* Style how it should look when printed */
+@media print {
+  /* Style the callout component by its IPE definition */
+  .callout,
+  .page-specific-thing {
+    color: darkslategray; }
+
+  .button,
+  button,
+  input[type="button"] {
+    color: lightgray; } }
+.button,
+button,
+input[type="button"] {
+  color: red; }

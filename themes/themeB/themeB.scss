@@ -1,0 +1,71 @@
+/* Theme B
+ Demonstrating using a different IPE definition that outputs Bootstrap compatible classes
+ using the same component interface. */
+
+// Import component IPE definition mixins
+@import "../../components/extends";
+
+// Demonstrating that you can use any libraries or whatever you like
+@import "../../some-sass-library/mixins";
+
+@import "variables";
+
+
+/* You control where your output goes: (and order does not matter!) */
+@import "rules"; // Try commenting me out ;)
+
+
+// Style button
+/** Buttons **/
+
+%cmp-button {
+    color: $color;
+}
+
+
+// Style callout
+/** Callouts **/
+
+/* Style the callout component by its IPE definition */
+%cmp-callout {
+    border: 1px solid black;
+    padding: 1em;
+}
+
+/* Style the callout (alert modifier) component by its IPE definition */
+%cmp-callout_alert {
+    border-color: red;
+    background: red;
+}
+
+// Note in this theme we go on and define warning and positive colors
+
+/* Style the callout (warning modifier) component by its (optional!) IPE definition */
+%cmp-callout_warning {
+    border-color: yellow;
+    background: yellow;
+}
+
+/* Style the callout (positive modifier) component by its (optional!) IPE definition */
+%cmp-callout_positive {
+    border-color: green;
+    background: green;
+}
+
+
+// Style button in callout
+/** Complexity: Style button in callout **/
+
+/* Style the callout component by its IPE definition */
+%cmp-callout {
+
+    %cmp-button {
+
+        color: blue;
+        background-color: $color;
+
+    }
+}
+
+
+

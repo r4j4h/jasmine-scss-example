@@ -1,0 +1,9 @@
+
+.theme-color--primary {
+    @extend %theme-color--primary;
+}
+
+
+// Order does not matter
+@include define-button();
+@include define-callout();

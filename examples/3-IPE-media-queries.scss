@@ -1,0 +1,53 @@
+/* Media Query Demonstration */
+
+// Demonstrating that you can use any libraries or whatever you like
+@import "../some-sass-library/mixins";
+// Import button component IPE definition mixins
+@import "../components/button/extends";
+// Import callout component IPE definition mixins
+@import "../components/callout/extends";
+// Include the minimal callout components' IPE definitions
+@include define-callout-solo();
+@include define-button();
+
+/* Style the callout component by its IPE definition */
+%cmp-callout {
+
+    .page-specific-thing {
+        @include apply-basic-clearfix();
+    }
+
+}
+
+/* Style how it should look on screens */
+@media screen {
+
+    // Style the callout component by its IPE definition
+    %cmp-callout {
+        font-size: 1.5em;
+    }
+
+    .page-specific-thing {
+        @include apply-basic-clearfix();
+    }
+
+}
+
+/* Style how it should look when printed */
+@media print {
+
+    /* Style the callout component by its IPE definition */
+    %cmp-callout,
+    .page-specific-thing {
+        color: darkslategray;
+    }
+
+    %cmp-button {
+        color: lightgray;
+    }
+
+}
+
+%cmp-button {
+    color: red;
+}

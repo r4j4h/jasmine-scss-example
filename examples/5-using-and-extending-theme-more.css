@@ -1,0 +1,12 @@
+/* Demonstration page CSS that builds on a theme */
+/* Includes Theme A via @import */
+@import url(../themes/themeA/themeA.css);
+/* Style the callout component by its IPE definition */
+.callout .page-specific-thing {
+  border-width: 100px; }
+
+/* (Re-)Style the button component by its IPE definition */
+.button,
+button,
+input[type="button"] {
+  color: brown; }

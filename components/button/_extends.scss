@@ -1,0 +1,20 @@
+// Button Inverted Placeholder Extends (IPE) Definition Mixins
+
+
+// Mixin for an IPE definition for common button rules
+@mixin define-button() {
+	.button,
+	button,
+	input[type="button"] {
+		@extend %cmp-button;
+	}
+
+}
+
+// Mixin for an IPE definition for buttons for Bootstrap
+@mixin define-button-bootstrap() {
+	.btn {
+		@extend %cmp-button;
+	}
+}
+

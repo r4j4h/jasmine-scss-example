@@ -1,0 +1,37 @@
+/* Re-extending Placeholder Selectors (Dangerous) */
+// See http://www.sitepoint.com/cross-media-query-extend-sass/
+//
+
+
+// Import button component IPE definition mixins
+@import "../components/button/extends";
+// Import callout component IPE definition mixins
+@import "../components/callout/extends";
+
+// Include the minimal callout components' IPE definitions
+@include define-callout-solo();
+
+// Include the button components' IPE definitions
+@include define-button();
+
+/* Style the callout component by its IPE definition */
+%cmp-callout {
+
+    // We are assocating callouts with buttons so they now share styles
+    /* Style the button component by its IPE definition */
+    @extend %cmp-button;
+
+}
+
+// We're crazy to do this, but callouts will get this style too
+%cmp-button {
+    color: red;
+}
+
+// It's a good thing this is crazy, because it discourages us from doing this, which is not allowed with @extends!
+//@media print {
+//
+//    %cmp-callout {
+//        @extend %cmp-button;
+//    }
+//}

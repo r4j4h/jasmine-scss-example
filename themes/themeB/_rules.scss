@@ -1,0 +1,7 @@
+
+@include define-button-bootstrap();
+
+/* Include the callout components' IPE definitions */
+@include define-callout();
+// Include the minimal callout components' IPE definitions
+@include define-callout-solo(); // Not necessary b/c of main call but does not negatively affect output

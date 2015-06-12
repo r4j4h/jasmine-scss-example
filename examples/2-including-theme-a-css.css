@@ -1,0 +1,6 @@
+/* Demonstration page CSS using aspects from Theme A */
+/* Assumes themeA.css is available under same relative path to CSS file and will let browser load */
+@import url(../themes/themeA/themeA.css);
+.hero {
+  width: 100%;
+  border-bottom-color: red; }

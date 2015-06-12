@@ -1,0 +1,25 @@
+/* Demonstration page CSS */
+/* Works with or without themes */
+
+// Import button component IPE definition mixins
+@import "../components/callout/extends";
+
+// Include the minimal callout components' IPE definitions
+@include define-callout-solo();
+
+/* Style the callout component by its IPE definition */
+%cmp-callout {
+
+    padding: 10px;
+
+    // Can include page specific things
+    .page-specific-thing {
+        border-width: 100px;
+    }
+
+    // Can also include components by their IPE definitions!
+    > %cmp-callout {
+        padding: 5px; // Nested callouts will be smaller
+    }
+
+}

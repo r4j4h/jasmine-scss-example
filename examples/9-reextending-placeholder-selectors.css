@@ -1,0 +1,9 @@
+/* Re-extending Placeholder Selectors (Dangerous) */
+/* Style the callout component by its IPE definition */
+.callout {
+  /* Style the button component by its IPE definition */ }
+
+.button,
+button,
+input[type="button"], .callout {
+  color: red; }

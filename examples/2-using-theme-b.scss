@@ -1,0 +1,13 @@
+/* Demonstration page CSS using aspects from Theme B */
+/* Assumes themeB.css is included before it */
+
+// This couples the output to the theme, so one file per theme might be useful.
+
+// If we want to use specific theme variables to maintain colors, we can!
+
+@import "../themes/themeB/variables";
+
+.hero {
+    width: 100%;
+    border-bottom-color: $color;
+}

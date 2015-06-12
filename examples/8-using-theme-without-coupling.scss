@@ -1,0 +1,14 @@
+// If themes are uniform in their output, then you can rely on this to de-hook the SASS coupling between themes
+
+/* Demonstration page CSS using aspects from Theme A */
+/* Assumes themeA.css is included before it */
+
+
+// If we want to use specific theme variables to maintain colors, we can!
+
+@import "../themes/themeA/variables";
+
+.hero {
+    width: 100%;
+    border-bottom-color: $color;
+}
